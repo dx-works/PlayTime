@@ -19,6 +19,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: "playtime_develop"
+    tty: true
+    stdin_open: true
     volumes:
       - .:/myapp
     ports:
