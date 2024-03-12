@@ -7,7 +7,7 @@ ENV BUNDLER_VERSION 2.3.14
 
 RUN apt-get update
 
-RUN apt-get -y install vim
+RUN apt-get -y install vim libpq-dev build-essential
 
 #####for-develop######
 # rails-erd
