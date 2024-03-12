@@ -7,6 +7,8 @@ ENV BUNDLER_VERSION 2.3.14
 
 RUN apt-get update
 
+RUN apt-get -y install vim
+
 #####for-develop######
 # rails-erd
 # RUN apt-get -y install ruby-graphviz
