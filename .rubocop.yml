@@ -1,0 +1,276 @@
+AllCops:
+
+  # デフォルトを最初にすべてfalseに設定
+  DisabledByDefault: true
+
+  # バージョンアップ時の新ルール適応を実施する
+  NewCops: enable
+
+  # 何のルールに引っかかったか表示する
+  DisplayCopNames: true
+
+  # 以下ディレクトリ配下のファイルは対象外とする
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+    - 'config/**/*'
+    - 'test/**/*'
+
+
+########################
+# Line columns
+########################
+
+#１行のソースコードの長さを設定 
+Layout/LineLength:
+  Max: 120
+
+
+########################
+# Indentation
+########################
+
+# スコープの宣言と関数でインデントを空けない
+Layout/IndentationConsistency:
+  Enabled: true
+
+# インデントはspaceのみ
+Layout/IndentationStyle:
+  EnforcedStyle: spaces
+
+# インデントは2つにする
+Layout/IndentationWidth:
+  Enabled: true
+
+# アクセス修飾子の前に正しい数の空白文字があることを確認：オプション-a 実行で解消
+Layout/AccessModifierIndentation:
+  Enabled: true
+
+# do..endブロックのendステートメントが独自の行にあるかどうかをチェック
+Layout/BlockEndNewline:
+  Enabled: true
+
+# コメントのインデントチェック
+Layout/CommentIndentation:
+  Enabled: true
+
+# else(elsif)の記述位置をチェック
+Layout/ElseAlignment:
+  Enabled: true
+
+# メソッド定義が1つの空行で区切られているかどうかをチェック
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+
+
+########################
+# Whitespace
+########################
+
+# 末尾に余計な空白が存在していないかチェック
+Layout/TrailingWhitespace:
+  Enabled: true
+
+# コンマ,の後に、スペースがあることをチェック
+Layout/SpaceAfterComma:
+  Enabled: true
+
+# !の後のスペースがないことをチェック 
+Layout/SpaceAfterNot:
+  Enabled: true
+
+########################
+# Empty lines
+########################
+
+# 文末の後に一行改行があるかチェック
+Layout/TrailingEmptyLines:
+  EnforcedStyle: final_newline
+
+  
+########################
+# Strings
+########################
+
+# 文末のendの後に一行改行が存在しているかチェック
+Style/EmptyLiteral:
+  Enabled: true
+
+# Rubyの % 記法利用時の囲い文字をチェック
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+# 文字列内で冗長な補間をしていないかチェック
+Style/RedundantInterpolation:
+  Enabled: true
+
+# 配列が複数行にまたがる場合に、開き括弧 { と閉じ括弧 } の配置に一貫性があるかチェック
+Layout/MultilineArrayBraceLayout:
+  EnforcedStyle: symmetrical
+
+
+########################
+# Arrays
+########################
+
+# 配列リテラルの右中括弧が最後の配列要素と同じ行または新しい行にあることをチェック
+Style/TrailingCommaInArrayLiteral:
+    EnforcedStyleForMultiline: consistent_comma
+
+# 文字列配列を %w / %W 記法で記述しているかどうかチェック
+Style/WordArray:
+  EnforcedStyle: brackets
+
+
+########################
+# Hashes
+########################
+
+# ハッシュリテラルに利用するブレース開始直後、ブレース終了直前、空ブレースの間に半角スペースを必要とするかどうかチェック
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+
+# ハッシュの構文使用時、Ruby 1.9の記法とそれより前の記法が混在していないかチェック
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+
+# 1行で配列を表記する際は、末尾にカンマを表記していないかチェック
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+# コロンの後にスペースが空いているかチェック
+Layout/SpaceAfterColon:
+  Enabled: true
+
+########################
+# Operations
+########################
+
+# 演算子の周囲にスペースがあるかチェック
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+# 「and」と「or」ではなく、「&&」と「||」を使用しているかチェック
+Style/AndOr:
+  Enabled: true
+
+# 三項演算子がネストされていないかチェック
+Style/NestedTernaryOperator:
+  Enabled: true
+
+# 三項演算子で改行していないかチェック
+Style/MultilineTernaryOperator:
+  Enabled: true
+
+
+########################
+# Assignments
+########################
+
+# 並列代入をしていないかチェック
+Style/ParallelAssignment:
+  Enabled: true
+
+# 比較を行う場合、「==」を使用しているか、「=」の場合はカッコで囲われているかチェック
+Lint/AssignmentInCondition:
+  Enabled: true
+  AllowSafeAssignment: false
+
+
+########################
+# Control structures
+########################
+
+# 否定形のif文はunlessが使用されているかチェック
+Style/NegatedIf:
+  Enabled: true
+
+# 否定形のwhileはuntilが使用されているかチェック
+Style/NegatedWhile:
+  Enabled: true
+
+# elseを含むif文でunlessが使われていないかチェック
+Style/UnlessElse:
+  Enabled: true
+
+# case句使用時はwhen ~ then ~を使用しているかチェック
+Style/WhenThen:
+  Enabled: true
+
+# 複数行の `while/until` ステートメントで 'do` が使用されているかどうかをチェック
+Style/WhileUntilDo:
+  Enabled: true
+
+# while, until が1行80文字収まる場合に1行で記述しているかチェック
+Style/WhileUntilModifier:
+  Enabled: true
+
+
+########################
+# Method calls
+########################
+
+# 中かっこの前にスペースがあるかチェック
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyle: space
+
+# 中かっこの内部にスペースがあるかチェック
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+
+ 
+########################
+# BEGIN AND END
+########################
+
+# BEGIN ブロックとEND ブロックをチェック
+Style/BeginBlock:
+  Enabled: true
+Style/EndBlock:
+  Enabled: true
+
+
+########################
+# Module and Class definitions
+########################
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/Attr:
+  Enabled: true
+
+Style/ClassMethods:
+  Enabled: true
+
+# ??
+Style/TrailingBodyOnMethodDefinition:
+  Enabled: true
+
+########################
+# Method definitions
+########################
+
+# 引数がかっこで囲まれているかチェック
+Style/MethodDefParentheses:
+  Enabled: true
+
+# 関数の後にスペースがあるかチェック
+Layout/SpaceAfterMethodName:
+  Enabled: true
+
+
+########################
+# Variables
+########################
+
+# 組み込み以外の自分で定義したグローバル変数が存在するかチェック
+Style/GlobalVars:
+  Enabled: true
+
+# クラス変数の使用をチェック
+Style/ClassVars:
+  Enabled: true

@@ -49,6 +49,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'dotenv-rails', '~> 2.8'
 
 group :development, :test do
@@ -67,6 +69,12 @@ group :development do
   # gem "spring"
 
   gem 'pry-rails'
+
+  # rubocop
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :test do
