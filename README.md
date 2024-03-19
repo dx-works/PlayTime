@@ -1,24 +1,11 @@
-# README
+## Get Start
+* docker compose build --no-cache
+* docker-compose up -d
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Language/environment/version
+* ruby 3.2.2
+* Ruby on rails 7.0.8.1
+* postgres 16.2
+* Nginx
+* puma
+* Rubocop
